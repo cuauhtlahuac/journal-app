@@ -1,0 +1,37 @@
+// _el guión bajo en el nombre del archivo e importante!
+
+// colors
+$primary: #5c62c5;
+$dark-gray: #363636;
+$light-gray: #d8d8d8;
+$alert: #ff0000;
+
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669f2;
+
+@mixin padding-horizontal($size) {
+  padding-top: 0;
+  padding-right: $size;
+  padding-bottom: 0;
+  padding-left: $size;
+}
+
+@mixin padding-vertical($size) {
+  padding-top: $size;
+  padding-right: 0;
+  padding-bottom: $size;
+  padding-left: 0;
+}
+
+@mixin center-in-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $white;
+}

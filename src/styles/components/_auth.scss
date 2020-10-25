@@ -1,0 +1,80 @@
+.auth__main {
+	align-items: center;
+	background-color: $primary; // no es necesario importar la variable
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.auth__box-container {
+	background-color: white;
+	box-shadow: 0 3px $dark-gray;
+	border-radius: 2px;
+	padding: 20px;
+	width: 250px;
+}
+
+.auth__title {
+	color: darken(
+		$color: $primary,
+		$amount: 15
+	); // función de sass que obscurece el color
+}
+
+.auth__input {
+	color: $dark-gray;
+	border: 0;
+	border-bottom: 1px solid $light-gray;
+	font-size: 16px;
+	margin-bottom: 30px;
+	height: 20px;
+	width: 100%;
+
+	transition: border-bottom .3s ease;
+
+	&:focus {
+		outline: none;
+		border-bottom: solid 2px $primary;
+	}
+}
+
+.auth__social-networks {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.auth_alert_error {
+	background-color: lighten(desaturate($alert, 5), 15);
+	border-radius: 5px;
+	color: lighten($alert, $amount: 48);
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+	transition: margin 1s ease;
+	& > span {
+		animation-duration: .5s;
+		animation-name: animate-error;
+		margin: 10px;
+		opacity: 1;
+	}
+}
+
+@keyframes animate-error {
+	from {
+		margin: 0px;
+		opacity: 0;
+	}
+}
+
+label {
+	color: $dark-gray;
+	&:hover {
+		transition: margin-bottom 10 1s ease;
+		transition: border-top .3s ease;
+	}
+}
